@@ -4,7 +4,7 @@
   line-height: 28px;
 }
 
-.markdown img{
+.markdown img {
   @apply px-5;
   width: 100%;
   -webkit-user-drag: none;
@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 768px) {
-  .markdown img{
+  .markdown img {
     @apply px-0;
   }
 }
@@ -46,7 +46,7 @@
   left: -0.1em;
   right: -0.1em;
   bottom: 0;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
   background-color: rgba(111, 146, 186, 0.5);
 }
 .markdown a:hover:after {
@@ -54,26 +54,20 @@
 }
 
 .markdown h1 {
-  @apply text-4xl mt-12 mb-4 leading-snug relative;
+  @apply text-4xl ml-4 mt-12 mb-4 leading-snug relative;
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug relative;
+  @apply text-3xl ml-4 mt-12 mb-4 leading-snug relative;
 }
 
 .markdown h3 {
-  @apply text-2xl mt-8 mb-4 leading-snug relative;
+  @apply text-2xl ml-4 mt-8 mb-4 leading-snug relative;
 }
 
 .markdown h1:before,
 .markdown h2:before,
 .markdown h3:before {
-  @apply absolute text-neutral-100;
-
-  content: ">";
-  left: -25px;
-  top: 0;
-  opacity: 0.2;
 }
 
 .markdown blockquote {
