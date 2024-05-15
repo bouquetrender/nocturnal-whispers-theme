@@ -1,0 +1,91 @@
+.markdown {
+  @apply leading-relaxed;
+
+  line-height: 28px;
+}
+
+.markdown img{
+  @apply px-5;
+  width: 100%;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.markdown p {
+  @apply px-5;
+}
+.markdown blockquote p {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .markdown img{
+    @apply px-0;
+  }
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6;
+
+  color: hsla(0, 0%, 100%, 0.88);
+}
+
+.markdown a {
+  @apply relative whitespace-nowrap;
+}
+
+.markdown a:after {
+  @apply absolute;
+
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: -0.1em;
+  right: -0.1em;
+  bottom: 0;
+  transition: background-color .2s;
+  background-color: rgba(111, 146, 186, 0.5);
+}
+.markdown a:hover:after {
+  background-color: rgba(111, 146, 186, 0.9);
+}
+
+.markdown h1 {
+  @apply text-4xl mt-12 mb-4 leading-snug relative;
+}
+
+.markdown h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug relative;
+}
+
+.markdown h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug relative;
+}
+
+.markdown h1:before,
+.markdown h2:before,
+.markdown h3:before {
+  @apply absolute text-neutral-100;
+
+  content: ">";
+  left: -25px;
+  top: 0;
+  opacity: 0.2;
+}
+
+.markdown blockquote {
+  @apply text-neutral-100 font-medium;
+
+  border-left-width: 0.2rem;
+  border-radius: 4px;
+  border-left-color: #d4d4d4;
+  background-color: #2e323b;
+  padding: 0 1em;
+}
+.markdown blockquote p {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
